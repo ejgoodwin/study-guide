@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Study Guide</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+	<section class="container py-5">
+		<a href="../index.html">Study guide</a>
+ <h1>Insertion sort</h1>
+<ul>
+<li>Sorts in place (there are a constant number of items stored outside of the array)</li>
+<li>O(n^2)</li>
+<li>Effective for small arrays</li>
+<li>Reminder: sorting cards</li>
+</ul>
+<h2>Psuedo code</h2>
+<p><img alt="insertion sort" src="images/insertion-sort-psuedo-code.png" /></p>
+<h2>JavaScript implementation</h2>
+<pre>
+let arr = [2,1,76,34,22,100, 22, 1];
+for (let i = 1; i < arr.length; i++) {
+  let current = arr[i];
+  let j = i - 1;
+  while (j >= 0 && arr[j] > current) {
+    arr[j+1] = arr[j];
+    j--;
+  }
+  arr[j+1] = current;
+}
+
+console.log(arr);
+</pre>
+</section>
+</body>
+</html> 
