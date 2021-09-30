@@ -5,9 +5,7 @@
 * Reminder: sorting cards
 
 ## Psuedo code
-<div>
-	<img src="../images/insertion-sort-psuedo-code.png" style="max-width: 450px;">
-</div>
+<img src="../images/insertion-sort-psuedo-code.png" style="max-width: 450px;">
 
 ## JavaScript implementation
 <pre>
