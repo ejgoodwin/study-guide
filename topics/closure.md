@@ -12,6 +12,7 @@ When a function is invoked, a new slot of memory is used (the variable environme
 If you return a function from another function, the function that is returned stored its surrounding data (only the data that it references). When the outer function is removed from memory, the surrounding data can still be used via the internal function that was returned.
 
 <pre>
+<code class="language-javascript">
 function outer() {
   let counter = 0;
   function inner() {
@@ -29,6 +30,7 @@ newFunc(); // 2
 newFunc(); // 3
 
 newFunc2(); // 1
+</code>
 </pre>
 
 This is due to a hidden property: `[[scope]]`. When the function is returned and attached to a new label, the hidden property is still attached.

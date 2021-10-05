@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Study Guide</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+</head>
+<body>
+	<section class="container py-5">
+		<a href="../index.html">Study guide</a>
+ <h1>Merge sort</h1>
+<h2>Psuedo code</h2>
+<p><img src="../images/merge-sort-psuedo-code.png" style="max-width: 250px;"></p>
+<p><img src="../images/merge-sort-merge-psuedo-code.png" style="max-width: 370px;"></p>
+<h2>JavaScript implementation</h2>
+<pre>
+<code class="language-javascript">
+function merge(arr, start, middle, end) {
+  // Length of subarray 1.
+  const n1 = middle - start;
+  // Length of subarray 2.
+  const n2 = end - middle;
+  let left = [];
+  let right = [];
+  for (let i = 0; i <= n1; i++) {
+    left[i] = arr[start+i];
+  }
+  for (let i = 0; i < n2; i++) {
+    right[i] = arr[middle+i+1];
+  }
+
+  // Use infinity as sentinels.
+  left.push(Infinity);
+  right.push(Infinity);
+
+  let i = 0;
+  let j = 0;
+  for (let k = start; k <= end; k++) {
+    if (left[i] <= right[j]) {
+      arr[k] = left[i];
+      i++;
+    } else {
+      arr[k] = right[j];
+      j++;
+    }
+  }
+}
+
+function mergeSort(arr, start, end) {
+  if (start < end) {
+    const middle = Math.floor((start+end)/2);
+    mergeSort(arr, start, middle);
+    mergeSort(arr, middle+1, end);
+    merge(arr, start, middle, end);
+  }
+}
+
+const arr = [10,5,2,1,9,2,-50,90];
+
+mergeSort(arr, 0, arr.length-1);
+
+console.log(arr);
+</code>
+</pre>
+
+<p><a target="_blank" href="https://codepen.io/ejgoodwin/pen/NWgZJPz?editors=0010">Codepen</a></p>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html> 

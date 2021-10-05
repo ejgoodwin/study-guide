@@ -6,6 +6,7 @@
 	<title>Study Guide</title>
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" rel="stylesheet" />
 </head>
 <body>
 	<section class="container py-5">
@@ -20,6 +21,7 @@
 <p><strong>Closure</strong> allows you to hold on to data. It allows function definitions to have persistent memory.</p>
 <p>If you return a function from another function, the function that is returned stored its surrounding data (only the data that it references). When the outer function is removed from memory, the surrounding data can still be used via the internal function that was returned.</p>
 <pre>
+<code class="language-javascript">
 function outer() {
   let counter = 0;
   function inner() {
@@ -37,11 +39,14 @@ newFunc(); // 2
 newFunc(); // 3
 
 newFunc2(); // 1
+</code>
 </pre>
 
 <p>This is due to a hidden property: <code>[[scope]]</code>. When the function is returned and attached to a new label, the hidden property is still attached.</p>
 <h2>P.L.S.R.D</h2>
 <p>Persistent lexical scope reference data</p>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html> 

@@ -17,6 +17,7 @@ header = """<!DOCTYPE html>
 	<title>Study Guide</title>
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" rel="stylesheet" />
 </head>
 <body>
 	<section class="container py-5">
@@ -25,6 +26,8 @@ header = """<!DOCTYPE html>
 
 footer = """
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html> """
 

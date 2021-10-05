@@ -9,6 +9,7 @@
 
 ## JavaScript implementation
 <pre>
+<code class="language-javascript">
 let arr = [2,1,76,34,22,100, 22, 1];
 for (let i = 1; i < arr.length; i++) {
   let current = arr[i];
@@ -21,4 +22,5 @@ for (let i = 1; i < arr.length; i++) {
 }
 
 console.log(arr);
+</code>
 </pre>

@@ -6,6 +6,7 @@
 	<title>Study Guide</title>
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" rel="stylesheet" />
 </head>
 <body>
 	<section class="container py-5">
@@ -21,6 +22,7 @@
 <p><img src="../images/insertion-sort-psuedo-code.png" style="max-width: 450px;"></p>
 <h2>JavaScript implementation</h2>
 <pre>
+<code class="language-javascript">
 let arr = [2,1,76,34,22,100, 22, 1];
 for (let i = 1; i < arr.length; i++) {
   let current = arr[i];
@@ -33,7 +35,10 @@ for (let i = 1; i < arr.length; i++) {
 }
 
 console.log(arr);
+</code>
 </pre>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html> 
