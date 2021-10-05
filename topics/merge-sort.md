@@ -1,9 +1,9 @@
 # Merge sort
 
-## Psuedo code
-<img src="../images/merge-sort-psuedo-code.png" style="max-width: 250px;">
+## Pseudocode
+<img src="../images/merge-sort-pseudocode.png" style="max-width: 250px;">
 
-<img src="../images/merge-sort-merge-psuedo-code.png" style="max-width: 370px;">
+<img src="../images/merge-sort-merge-pseudocode.png" style="max-width: 370px;">
 
 ## JavaScript implementation
 <pre>

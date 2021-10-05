@@ -2,8 +2,8 @@
 * repeatedly steps through a list and swaps adjacent items
 * O(n^2)
 
-## Pseudo code
-<img src="../images/bubble-sort-pseudo-code.png" style="max-width: 250px;">
+## Pseudocode
+<img src="../images/bubble-sort-pseudocode.png" style="max-width: 250px;">
 
 ## JavaScript implementation
 <pre>

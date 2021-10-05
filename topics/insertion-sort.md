@@ -4,8 +4,8 @@
 * Effective for small arrays
 * Reminder: sorting cards
 
-## Psuedo code
-<img src="../images/insertion-sort-psuedo-code.png" style="max-width: 450px;">
+## Pseudocode
+<img src="../images/insertion-sort-pseudocode.png" style="max-width: 450px;">
 
 ## JavaScript implementation
 <pre>
