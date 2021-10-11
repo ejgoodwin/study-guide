@@ -1,4 +1,7 @@
 # Merge sort
+* Recursive
+* Divide and conquer
+* O(nlogn)
 
 ## Pseudocode
 <img src="../images/merge-sort-pseudocode.png" style="max-width: 250px;">
