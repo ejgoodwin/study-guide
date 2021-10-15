@@ -4,16 +4,24 @@
 * Max heap: parent >= child
 
 <pre>
+Min heap:
      5
    /   \
   8      9
  / \    /
 10  12 15
-</pre>
 
 Represented as an array:
-<pre>
 [5,8,9,10,12,15]
+
+Max heap:
+     20
+   /   \
+  16    17
+ / \    /
+7   5  2
+Represented as an array:
+[20,16,17,7,5,2]
 </pre>
 
 Find **parent** index of *i*:
