@@ -31,10 +31,10 @@ floor(i / 2)
 
 Find **left child** index of *i*:
 <pre>
-i * 2
+i * 2 + 1
 </pre>
 
 Find **right child** index of *i*:
 <pre>
-i * 2 + 1
+i * 2 + 2
 </pre>
