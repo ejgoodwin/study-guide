@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Study Guide</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+</head>
+<body>
+	<section class="container py-5">
+		<a href="../index.html">Study guide</a>
+ <h1>Quicksort</h1>
+<ul>
+<li>Recursive</li>
+<li>O(nlogn)</li>
+</ul>
+<h2>Pseudocode</h2>
+<p><img src="../images/quicksort.png" style="max-width: 250px;"></p>
+<p><img src="../images/quicksort-partition.png" style="max-width: 250px;"></p>
+<h2>JavaScript implementation</h2>
+<pre>
+<code class="language-javascript">
+const array = [19,0,45,-1234,9,999,-2,1];
+
+function quicksort(arr, start, end) {
+  if (start < end) {
+    let pivot = partition(arr, start , end);
+    quicksort(arr, start, pivot-1);
+    quicksort(arr, pivot+1, end);
+  }
+  return arr;
+}
+
+function partition(arr, start , end) {
+  let pivot = arr[end];
+  let leftWall = start - 1;
+  for (let i = start; i < end; i++) {
+    if (arr[i] <= pivot) {
+      leftWall++;
+      // exchange arr[i] with arr[j].
+      let temp = arr[leftWall];
+      arr[leftWall] = arr[i];
+      arr[i] = temp;
+    }
+  }
+  // exchange arr[leftWall+1] with arr[end].
+  let temp = arr[leftWall+1];
+  arr[leftWall+1] = arr[end];
+  arr[end] = temp;
+  return leftWall+1;
+}
+
+console.log(quicksort(array, 0, array.length-1));
+</code>
+</pre>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html> 

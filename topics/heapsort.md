@@ -12,6 +12,7 @@
 
 ## JavaScript implementation (max-heap)
 <pre>
+<code class="language-javascript">
 const heap = [0,1,2,3,4,5,6,7];
 
 function maxHeapify(arr, i) {
@@ -54,4 +55,5 @@ function heapsort(arr) {
 }
 
 console.log('heap sorted', heapsort(heap));
+</code>
 </pre>
