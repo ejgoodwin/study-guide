@@ -3,3 +3,29 @@ pre {
 	border-radius: 4px;
 	padding: 1rem;
 }
+.collapse-content {
+	display: none;
+}
+.collapse-content[open] {
+	display: table;
+}
+button[collapse-title] {
+	background: #e6f2fa;
+	border: none;
+	border-radius: 4px;
+	display: grid;
+	grid-template-columns: 30px 1fr;
+	padding: .5rem  1rem;
+	text-align: initial;
+	width: 100%;
+}
+button[collapse-title]:hover {
+	background: #dcedf9;
+	cursor: pointer;
+}
+button[collapse-title]::before {
+	content: '\002B';
+}
+button[collapse-title][open]::before {
+	content: '\002D';
+}
