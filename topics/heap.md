@@ -26,7 +26,7 @@ Represented as an array:
 
 Find **parent** index of *i*:
 <pre>
-floor(i / 2)
+floor((i - 1) / 2)
 </pre>
 
 Find **left child** index of *i*:
