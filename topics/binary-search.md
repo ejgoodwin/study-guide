@@ -17,7 +17,7 @@
 ### Iterative
 <pre>
 <code class="language-javascript">
-const arr = [1,3,6,8,9,10];
+const arr = [1,4,8,12,17,21,26,32,38,44,49,50,55];
 const goal = 9;
 let goalIndex = -1;
 let min = 0;
@@ -45,7 +45,7 @@ console.log(goalIndex);
 ### Recursive
 <pre>
 <code class="language-javascript">
-const binarySearchArr = [1,4,8,12,17,21,26,32,38,44,49,50,55,61,67,77,89,90,100,101];
+const binarySearchArr = [1,4,8,12,17,21,26,32,38,44,49,50,55];
 const goal = 89;
 let binarySearchMin = 0;
 let binarySearchMax = binarySearchArr.length-1;
