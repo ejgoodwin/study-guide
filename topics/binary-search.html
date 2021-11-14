@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Study Guide</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+</head>
+<body>
+	<section class="container py-5">
+		<a href="../index.html">Study guide</a>
+ <h1>Binary search</h1>
+<ul>
+<li>Searches for an item in a <strong>sorted</strong> list</li>
+<li>O(log n)</li>
+<li>Divide and conquer</li>
+<li>Implemented using recursion or iteration</li>
+</ul>
+<h2>Demo</h2>
+<p><label for="binary-search-goal-input" class="d-block b-s-label">
+    Enter a goal
+    <input type="text" value="50" id="binary-search-goal-input" class="d-block">
+</label>
+<button class="btn btn-primary" id="binary-search-play" disabled>Play demo</button></p>
+<div class="binary-search-container"></div>
+<div class="binary-search-result">Search result:</div>
+
+<h2>JavaScript implementation</h2>
+<h3>Iterative</h3>
+<pre>
+<code class="language-javascript">
+const arr = [1,3,6,8,9,10];
+const goal = 9;
+let goalIndex = -1;
+let min = 0;
+let max = arr.length-1;
+let mid;
+
+while (min <= max) {
+  mid = Math.floor((min + max) / 2);
+  if (arr[mid] == goal) {
+    goalIndex = mid;
+    break;
+  } else if (goal < arr[mid]) {
+    max = mid - 1;
+  } else if (goal > arr[mid]) {
+    min = mid + 1;
+  }
+}
+
+let goalReached = goalIndex == -1 ? false : true;
+console.log('goal reached', goalReached);
+console.log(goalIndex);
+</code>
+</pre>
+
+<h3>Recursive</h3>
+<pre>
+<code class="language-javascript">
+const binarySearchArr = [1,4,8,12,17,21,26,32,38,44,49,50,55,61,67,77,89,90,100,101];
+const goal = 89;
+let binarySearchMin = 0;
+let binarySearchMax = binarySearchArr.length-1;
+
+function binarySearch(arr, min, max) {
+    const mid = Math.floor((min + max) / 2);
+    if (arr[mid] == goal) {
+        console.log('goal', mid);
+        return mid;
+    } else if (min >= max) {
+        console.log('no match');
+        return -1;
+    } else if (goal > arr[mid]) {
+        return binarySearch(arr,  mid + 1, max);
+    } else {
+        return binarySearch(arr, min, mid - 1);
+    }
+}
+
+console.log(binarySearch(binarySearchArr, binarySearchMin, binarySearchMax));
+</code>
+</pre>
+</section>
+<script src="../main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html> 

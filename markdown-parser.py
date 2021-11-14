@@ -26,6 +26,7 @@ header = """<!DOCTYPE html>
 
 footer = """
 </section>
+<script src="../main.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>

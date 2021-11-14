@@ -29,3 +29,72 @@ button[collapse-title]::before {
 button[collapse-title][open]::before {
 	content: '\002D';
 }
+
+/* Binary search. */
+
+.binary-search-container {
+	display: flex;
+	font-size: .9rem;
+	margin-bottom: 1.5rem;
+}
+
+.binary-search-result {
+	margin-bottom: 2rem;
+}
+
+.binary-search-item {
+	background: #d5f3ff;
+	border: 2px solid transparent;
+	padding: .3rem .6rem;
+}
+
+.edge {
+	border: 2px solid #c684f7;
+	position: relative;
+}
+.min-edge::after,
+.max-edge::after,
+.mid::after,
+.match::after {
+	position: absolute;
+	bottom: -22px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.max-edge::after {
+	content: 'Max';
+}
+
+.min-edge::after {
+	content: 'Min';
+}
+
+.b-s-no-match .binary-search-item  {
+	background: #ffb5ad;
+}
+
+.mid {
+	background: #fffd5d;
+	position: relative;
+}
+
+.mid::after {
+	content: 'Mid';
+}
+
+.match {
+	background: #81fba9;
+}
+
+.match::after {
+	content: 'Goal!';
+}
+
+.b-s-label {
+	font-weight: bold;
+}
+
+.b-s-label input {
+	margin-bottom: .5rem;
+	width: 100px;
+}
